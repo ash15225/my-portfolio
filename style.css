@@ -571,3 +571,85 @@ nav {
     justify-content: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
+/* ===== Responsive Fixes ===== */
+@media (max-width: 768px) {
+  nav .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .links {
+    display: none; /* hide desktop links */
+  }
+
+  nav .hamburg {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .dropdown .links {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  section {
+    padding: 60px 15px;
+  }
+
+  /* Home Section */
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-container .image img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  /* About Section */
+  #about > div {
+    flex-direction: column;
+    text-align: center;
+  }
+  #about img {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  #about .grid {
+    grid-template-columns: 1fr; /* stack details */
+  }
+
+  /* Skills Circles */
+  .skills-circles {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  /* Resume Section */
+  #resume > div {
+    flex-direction: column;
+  }
+
+  /* Services */
+  .service-list {
+    grid-template-columns: 1fr; /* one per row on phone */
+  }
+
+  /* Contact */
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-info, .contact-form {
+    width: 100%;
+  }
+
+  /* Footer */
+  footer div {
+    flex-direction: column;
+    text-align: center;
+  }
+}
